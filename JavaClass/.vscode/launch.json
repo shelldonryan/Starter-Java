@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Args",
+            "request": "launch",
+            "mainClass": "Args",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "Methods",
+            "request": "launch",
+            "mainClass": "Methods",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "While",
+            "request": "launch",
+            "mainClass": "While",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "For",
+            "request": "launch",
+            "mainClass": "For",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "Vetor",
+            "request": "launch",
+            "mainClass": "Vetor",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "SecondClass",
+            "request": "launch",
+            "mainClass": "SecondClass",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "FirstClass",
+            "request": "launch",
+            "mainClass": "FirstClass",
+            "projectName": "Starter-Java_7a492356"
+        },
+        {
+            "type": "java",
+            "name": "OneList",
+            "request": "launch",
+            "mainClass": "OneList",
+            "projectName": "Starter-Java_7a492356"
+        }
+    ]
+}
