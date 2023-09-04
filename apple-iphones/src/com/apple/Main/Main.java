@@ -41,6 +41,6 @@ public class Main {
 
         System.out.printf("\nTotal Value: R$ %.2f\n", features.value);
         System.out.printf("Amount of installments: %d\n", order.installment);
-         System.out.printf("The number of the installment: R$ %.2f\n", dividerValue);
+        System.out.printf("The number of the installment: R$ %.2f\n", dividerValue);
     }
 }
