@@ -22,7 +22,7 @@ public class Main {
     Person person3 = new Person("Francisca Maria", 38, "Street A, 82",67850123, "feminino");
     Person person4 = new Person("Dimas Oliveira", 45, "Street A, 82",81514800, "masculino");
 
-    House house1 = new House();
+    House house1 = new House(2, 5, 4);
 
     house1.addAnimal(animal1);
     house1.addAnimal(animal2);
