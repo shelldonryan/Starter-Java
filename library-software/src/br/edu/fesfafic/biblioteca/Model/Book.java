@@ -18,6 +18,7 @@ public class Book {
     }
 
     public void DisplayInfo() {
+        String formatDate = String.format("%d",this.release.getDayOfMonth()) + "/" + String.format("%d",this.release.getMonthValue()) + "/" + String.format("%d",this.release.getYear());
         System.out.printf("""
                 \nInformation about the book
                 Title of the book: %s
@@ -25,6 +26,6 @@ public class Book {
                 ISBN: %s
                 Date of the release: %s
                 Amount available: %d
-                """, title, author, isbn, release, amountAvailable);
+                """, title, author, isbn, formatDate, amountAvailable);
     }
 }
