@@ -19,7 +19,7 @@ public class Main {
             "Morgan Housel", 
             "6555111100", 
             LocalDate.of(2021, 3, 12), 
-            10);
+            0);
         
         Book book2 = new Book(
             "The 48 Laws of Power", 
@@ -35,6 +35,9 @@ public class Main {
             "The end Knowlodge", 
             "Street 13ª Friday");
         
+        library1.singUpBook(book1);
+        library1.singUpBook(book2);
         library1.checkAvailability();
+
     }
 }
