@@ -4,7 +4,9 @@ public class Library {
     public String libraryName;
     public String adress;
     public Book[] avaibleBooks = new Book[100];
+    public User[] userLibrary = new User[100];
     public int amountOfBooks = 0;
+    public int amountOfUsers = 0;
 
     public Library(String libraryName, String adress) {
         this.libraryName = libraryName;
@@ -35,6 +37,16 @@ public class Library {
         }
     }
     
+    public void signUpUser(User user) {
+        for (int i = 0; i < this.userLibrary.length; i++) {
+            if (this.userLibrary[i] == null) {
+                userLibrary[i] = user;
+                amountOfUsers++;
+                break;
+            }
+        }
+    }
+    
     /*
     Other way
      public void SingUpBook(Book book) {
@@ -56,6 +68,45 @@ public class Library {
         for(int f = 0; f < this.amountOfBooks; f++) {
             if(avaibleBooks[f].author.equalsIgnoreCase(authorBook)) {
                 return this.avaibleBooks[f];
+            }
+        }
+        return null;
+    }
+
+    public void DisplayInfoLibrary() {
+        System.out.printf("""
+                \nUser Profile
+                library Name: %s
+                Adress: %s
+                Amount of Books: %d
+                """, libraryName, adress, amountOfBooks);
+    }
+
+    public String borrowBook(Book findBook) {
+        String isbn = findBook.isbn;
+        for(int i =0; i < this.amountOfBooks; i++) {
+            if (avaibleBooks[i].isbn.equals(isbn)) {
+                if (avaibleBooks[i].amountAvailable > 0) {
+                    avaibleBooks[i].amountAvailable--;
+                    return "This book was borrow sucessfully";
+                } else {
+                    return "This book there isn't available";
+                }
+            }
+        }
+        return null;
+    }
+
+    public String returnBook(Book findBook) {
+        String isbn = findBook.isbn;
+        for(int i =0; i < this.amountOfBooks; i++) {
+            if (avaibleBooks[i].isbn.equals(isbn)) {
+                if (avaibleBooks[i].amountAvailable > 0) {
+                    avaibleBooks[i].amountAvailable++;
+                    return "This book was returned sucessfully";
+                } else {
+                    return "This book there isn't available";
+                }
             }
         }
         return null;

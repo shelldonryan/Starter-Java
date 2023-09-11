@@ -11,8 +11,6 @@ public class Main {
         User user1 = new User(
             "Shelldon Ryan", 
             "shelldon.boy15@gmail.com");
-        
-        user1.DisplayInfo();
 
         Book book1 = new Book(
             "The Psychology of Money", 
@@ -34,10 +32,16 @@ public class Main {
         
         library.signUpBook(book1);
         library.signUpBook(book2);
+
+        library.signUpUser(user1);
+
         library.checkAvailability();
 
         Book findBoook1 = library.locateBookPerAuthor("Robert Greene");
         Book findBoook2 = library.locateBookPerTitle("The Psychology of Money");
+        
+        library.borrowBook(findBoook1);
+
 
         if (findBoook1 != null) {
             findBoook1.DisplayInfo();
@@ -50,6 +54,5 @@ public class Main {
         } else {
             System.out.println("This title not found!");
         }
-
     }
 }
