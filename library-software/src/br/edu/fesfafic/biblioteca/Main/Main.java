@@ -27,17 +27,29 @@ public class Main {
             "6555323604", 
             LocalDate.of(1998, 1, 1), 
             8);
-        
-        book1.DisplayInfo();
-        book2.DisplayInfo();
 
-        Library library1 = new Library(
+        Library library = new Library(
             "The end Knowlodge", 
             "Street 13ª Friday");
         
-        library1.singUpBook(book1);
-        library1.singUpBook(book2);
-        library1.checkAvailability();
+        library.signUpBook(book1);
+        library.signUpBook(book2);
+        library.checkAvailability();
+
+        Book findBoook1 = library.locateBookPerAuthor("Robert Greene");
+        Book findBoook2 = library.locateBookPerTitle("The Psychology of Money");
+
+        if (findBoook1 != null) {
+            findBoook1.DisplayInfo();
+        } else {
+            System.out.println("This author not found!");
+        }
+
+        if (findBoook2 != null) {
+            findBoook2.DisplayInfo();
+        } else {
+            System.out.println("This title not found!");
+        }
 
     }
 }

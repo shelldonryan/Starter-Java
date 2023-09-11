@@ -25,7 +25,7 @@ public class Library {
         }
     }
 
-    public void singUpBook(Book book) {
+    public void signUpBook(Book book) {
         for (int i = 0; i < this.avaibleBooks.length; i++) {
             if (this.avaibleBooks[i] == null) {
                 avaibleBooks[i] = book;
@@ -43,6 +43,22 @@ public class Library {
      }
      */
 
+    public Book locateBookPerTitle(String titleBook) {
+        for(int i = 0; i < this.amountOfBooks; i++) {
+            if(avaibleBooks[i].title.equalsIgnoreCase(titleBook)) {
+                return this.avaibleBooks[i];
+            }
+        }
+        return null;
+    }
     
+    public Book locateBookPerAuthor(String authorBook) {
+        for(int f = 0; f < this.amountOfBooks; f++) {
+            if(avaibleBooks[f].author.equalsIgnoreCase(authorBook)) {
+                return this.avaibleBooks[f];
+            }
+        }
+        return null;
+    }
 }
 
