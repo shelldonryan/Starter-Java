@@ -1,4 +1,4 @@
-package Environment;
+package Environments;
 
 public abstract class Environment {
     public String environmentName;
