@@ -7,5 +7,8 @@ public abstract class AnimalTerrestre extends Animal{
         super(name, specie, age, horaDeDormir, animalEats, height);
     }
 
-    
+    @Override
+    public void activity() {
+        System.out.println("Esse animal tem como principal atividade correr.");
+    }
 }

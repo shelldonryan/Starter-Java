@@ -12,8 +12,8 @@ public class AerialEnvironment extends Environment{
     public boolean presenceOfPollutants;
     public Animal[] aerialAnimals;
 
-    public AerialEnvironment(String environmentName, String geographyLocation,int maxHeight, double atmosphericPressure, int windSpeed, double windMoisture, boolean presenceOfPollutants, int qntAerialAnimals) {
-        super(environmentName, geographyLocation);
+    public AerialEnvironment(String environmentName,int maxHeight, double atmosphericPressure, int windSpeed, double windMoisture, boolean presenceOfPollutants, int qntAerialAnimals) {
+        super(environmentName, "Aerial");
         this.maxHeight = maxHeight;
         this.atmosphericPressure = atmosphericPressure;
         this.windSpeed = windSpeed;

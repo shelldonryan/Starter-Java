@@ -12,8 +12,8 @@ public class TerrestrialEnvironment extends Environment{
     public String typeOfRocks;
     public Animal[] terrestrialAnimals;
 
-    public TerrestrialEnvironment(String environmentName, String geographyLocation, int temperature, String typeOfSoil, String vegetationCover, double soilMoisture, String typeOfRocks, int qntTerrestrialAnimals) {
-        super(environmentName, geographyLocation);
+    public TerrestrialEnvironment(String environmentName, int temperature, String typeOfSoil, String vegetationCover, double soilMoisture, String typeOfRocks, int qntTerrestrialAnimals) {
+        super(environmentName, "Terrestrial");
         this.temperature = temperature;
         this.typeOfSoil = typeOfSoil;
         this.vegetationCover = vegetationCover;

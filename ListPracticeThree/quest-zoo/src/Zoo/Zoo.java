@@ -25,6 +25,7 @@ public class Zoo {
         for(int i = 0; i < environments.length; i++) {
             if(environments[i] == null) {
                 environments[i] = environment;
+                break;
             }
         }
     }

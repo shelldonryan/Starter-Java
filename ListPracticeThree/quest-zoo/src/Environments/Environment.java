@@ -2,10 +2,10 @@ package Environments;
 
 public abstract class Environment {
     public String environmentName;
-    public String geographyLocation;
+    public String typeOfEnvironment;
 
-    public Environment(String environmentName, String geographyLocation) {
+    public Environment(String environmentName, String typeOfEnvironment) {
         this.environmentName = environmentName;
-        this.geographyLocation = geographyLocation;
+        this.typeOfEnvironment = typeOfEnvironment;
     }
 }
