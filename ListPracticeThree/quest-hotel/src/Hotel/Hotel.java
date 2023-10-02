@@ -35,24 +35,23 @@ public class Hotel {
                 """, numberOfStars);
     }
     
-    public double priceOfRoom(int qntOfDays, String typeOfRoom) {
+    public void priceOfRoom(int qntOfDays, String typeOfRoom) {
         for(int i = 0; i < rooms.length; i++) {
             if(typeOfRoom.equals(rooms[i].typeOfRoom)) {
                 if(rooms[i].avaiable) {
                     double priceTotal = rooms[i].priceOfDaily * qntOfDays;
-                    return priceTotal;
+                    System.out.printf("\nThe price of this room is %.2f\n", priceTotal);
+                    break;
                 } else {
-                    System.out.println("This room isn't avaible");
+                    System.out.println("\nThis room isn't find!");
                     break;
                 }
             }
         }
-        System.out.println("This type room wasn't find");
-        return -1;
     }
     
     public void report(String report) {
-        System.out.println("Dear " + nameOfHotel + " " + report);
+        System.out.println("\nDear " + nameOfHotel + " " + report);
     }
     
     public void addRoom(Room room) {
