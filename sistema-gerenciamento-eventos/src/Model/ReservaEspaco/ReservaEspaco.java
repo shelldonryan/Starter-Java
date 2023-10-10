@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 import Model.Evento.Evento;
 
-public class ReservaEspaco {
+public abstract class ReservaEspaco {
     public Organizador organizadorDoEvento;
     public Evento eventoOrganizado;
     public LocalDate dataDaReserva;

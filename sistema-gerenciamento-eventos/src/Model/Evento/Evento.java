@@ -3,14 +3,14 @@ package Model.Evento;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class Evento {
+public abstract class Evento {
     public UUID idDoEvento;
     public String nomeDoEvento;
     public LocalDateTime dataHoraEvent;
     public String adress;
 
     public Evento(UUID idDoEvento, String nome, LocalDateTime dataHoraEvent, String adress) {
-        this.idDoEvento = idDoEvento;
+        this.idDoEvento = UUID.randomUUID();
         this.nomeDoEvento = nome;
         this.dataHoraEvent = dataHoraEvent;
         this.adress = adress;

@@ -3,7 +3,7 @@ package Model.Organizador;
 import java.util.UUID;
 import Model.Evento.Evento;
 
-public class Organizador {
+public abstract class Organizador {
     public String nomeDoOrganizador;
     public UUID idDoOrganizador;
     public String email;
@@ -11,7 +11,7 @@ public class Organizador {
 
     public Organizador(String nomeDoOrganizador, UUID idDoOrganizdor, String email, int lmtEventos) {
         this.nomeDoOrganizador = nomeDoOrganizador;
-        this.idDoOrganizador = idDoOrganizdor;
+        this.idDoOrganizador = UUID.randomUUID();
         this.email = email;
         this.eventos = new Evento[lmtEventos];
     }
