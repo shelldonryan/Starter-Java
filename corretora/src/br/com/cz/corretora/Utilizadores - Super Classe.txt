@@ -1,0 +1,22 @@
+Utilizadores - Super Classe
+
+1 - Analista de Investimentos:
+
+Analisa o mercado financeiro e fornece recomendações de investimentos aos clientes e à equipe de corretagem. Eles avaliam empresas, setores e tendências econômicas.
+
+2 - Gestor de Carteiras:
+
+Responsável pela administração dos portfólios de investimentos dos clientes. Eles selecionam e monitoram os ativos, com o objetivo de maximizar os retornos dentro das metas de risco estabelecidas.
+
+3 - Trader:
+
+Executa as ordens de compra e venda de ativos em nome dos clientes ou da própria corretora. Eles podem operar no curto prazo (day trader) ou no longo prazo.
+
+4 - Atendimento ao Cliente:
+
+Lida diretamente com os clientes, fornecendo suporte e assistência em relação a contas, transações e informações sobre investimentos.
+
+5 - Analista de Tecnologia:
+
+Desenvolve e mantém os sistemas de TI utilizados pela corretora, incluindo plataformas de negociação, sistemas de segurança e integrações com bolsas de valores.
+
