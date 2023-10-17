@@ -52,9 +52,6 @@ public class Carro implements IVeiculoComportamento, ICarroComportamento{
     public int getMarchaAtual() {
         return this.marchaAtual;
     }
-    public void setMarchaAtual(int novaMarchaAtual) {
-        this.marchaAtual = novaMarchaAtual;
-    }
 
     @Override
     public void acelerar(int valor) {

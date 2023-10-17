@@ -53,8 +53,9 @@ public class Moto implements IVeiculoComportamento, IMotoComportamento{
     public int getMarchaAtual() {
         return this.marchaAtual;
     }
-    public void setMarchaAtual(int novaMarchaAtual) {
-        this.marchaAtual = novaMarchaAtual;
+    
+    public boolean getEstacionado() {
+        return this.estacionar;
     }
 
     @Override
