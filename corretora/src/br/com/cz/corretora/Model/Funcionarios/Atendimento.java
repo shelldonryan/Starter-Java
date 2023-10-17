@@ -20,15 +20,15 @@ public class Atendimento extends Funcionario implements IAcessoContatos{
 
     @Override
     public void listaDeClientes() {
-        System.out.println("Contato dos Clientes da Empresa separados por Categoria");
+        System.out.println("\nContato dos Clientes da Empresa separados por Categoria");
     }
     @Override
     public void chatDaEmpresa() {
-        System.out.println("Duvidas a serem esclarecidas a partir do website da empresa");
+        System.out.println("\nDuvidas a serem esclarecidas a partir do website da empresa");
     }
     @Override
     public void emailDaEmpresa() {
-        System.out.println("Caixa de Entrada co emails para serem tratados com a empresa");
+        System.out.println("\nCaixa de Entrada co emails para serem tratados com a empresa");
     }
     
 }

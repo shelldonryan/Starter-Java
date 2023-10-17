@@ -20,11 +20,11 @@ public class Trader extends Funcionario implements IAcessoHomeBroker{
 
     @Override
     public void comprar() {
-        System.out.println("O trader Realizou uma operação de compra");
+        System.out.println("\nO trader Realizou uma operação de compra");
     }
 
     @Override
     public void vender() {
-        System.out.println("O trader Realizou uma operação de compra");
+        System.out.println("\nO trader Realizou uma operação de venda");
     }
 }

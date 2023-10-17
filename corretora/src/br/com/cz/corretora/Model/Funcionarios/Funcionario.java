@@ -17,12 +17,12 @@ public class Funcionario implements IAcessoSistema{
 
     @Override
     public void login() {
-        System.out.println("Funcionario Entrou no Sistema");
+        System.out.println("\nFuncionario Entrou no Sistema");
     }
     
     @Override
     public void logout() {
-        System.out.println("Funcionario Saiu do Sistema");
+        System.out.println("\nFuncionario Saiu do Sistema");
     }
 
     @Override

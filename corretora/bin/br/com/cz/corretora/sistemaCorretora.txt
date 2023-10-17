@@ -1,4 +1,4 @@
-### Model
+Model
 
 1. Crie um Diretório Funcionários:
     1. Crie uma classe abstrata Funcionário:
@@ -17,7 +17,7 @@
     5. Crie a classe Sistema de Análise.
     6. Os métodos criados em cada classe deve corresponder aos métodos iplemantados nas classes derivadas de funcionário.
 
-### Contrato
+Contrato
 
 1. Crie uma Interface para acessar o contato dos clientes.
     1. Método Lista de clientes.

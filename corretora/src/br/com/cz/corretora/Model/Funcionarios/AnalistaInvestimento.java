@@ -20,14 +20,14 @@ public class AnalistaInvestimento extends Funcionario implements IAcessoRelatori
 
     @Override
     public void recomendacaoInvestimento() {
-        System.out.println("Recomendações de Investimentos do Analista");
+        System.out.println("\nRecomendações de Investimentos do Analista");
     }
     @Override
     public void estrategiaInvestimento() {
-        System.out.println("Estrategia de Investimento Utilizada pelo Analista");
+        System.out.println("\nEstrategia de Investimento Utilizada pelo Analista");
     }
     @Override
     public void relatorioAnaliseMercado() {
-        System.out.println("Gráficos e relatórios para observação do Mercado e suas movimentações");
+        System.out.println("\nGráficos e relatórios para observação do Mercado e suas mov\nimentações");
     }
 }

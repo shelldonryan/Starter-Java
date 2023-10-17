@@ -20,12 +20,12 @@ public class GestorDeCarteira extends Funcionario implements IAcessoPortifolio{
 
     @Override
     public void retorno() {
-        System.out.println("Retorno apresentado da carteira do cliente");
+        System.out.println("\nRetorno apresentado da carteira do cliente");
     }
 
     @Override
     public void risco() {
-        System.out.println("Risco apresentado da carteira do cliente");
+        System.out.println("\nRisco apresentado da carteira do cliente");
     }
     
 }
