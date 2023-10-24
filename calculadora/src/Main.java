@@ -17,47 +17,13 @@ public class Main {
         System.out.println("\nDigite o segundo numero:");
         int numero2 = scanner.nextInt();
 
-        if(op.equals("+")) {
-            try {
-                int resultado = calculadora.sum(numero1, numero2);
-            System.out.println("\nResultado: "+ resultado);
-            } catch (Exception e) {
-                System.out.println(e);
-            } finally {
-                System.out.println("\nOperação Finalizada!");
-            }
-            
-        } else if (op.equals("-")) {
-            try {
-                int resultado = calculadora.subtraction(numero1, numero2);
-                System.out.println("\nResultado: "+ resultado);
-            } catch (Exception e) {
-                System.out.println(e);
-            } finally {
-                System.out.println("\nOperação Finalizada!");
-            }
-        } else if (op.equals("*")) {
-            try {
-                int resultado = calculadora.multiplication(numero1, numero2);
-                System.out.println("\nResultado: "+ resultado);
-            } catch (Exception e) {
-                System.out.println(e);
-            } finally {
-                System.out.println("\nOperação Finalizada!");
-            }
-        } else if (op.equals("/")) {
-            try {
-                int resultado = calculadora.division(numero1, numero2);
-                System.out.println("\nResultado: "+ resultado);
-            } catch (ArithmeticException e){
-                System.out.println("\nDivisao por zero nao existe");
-            } finally {
-                System.out.println("\nOperação Finalizada!");
-            }
-        } else {
-            System.out.println("\nSó aceitasse  '+', '-', '*' ou '/'");
+        switch (op) {
+            case "+" -> calculadora.sum(numero1, numero2);
+            case "-" -> calculadora.subtraction(numero1, numero2);
+            case "*" -> calculadora.multiplication(numero1, numero2);
+            case "/" -> calculadora.division(numero1, numero2);
         }
-        
+            
         scanner.close();
     }
 }
