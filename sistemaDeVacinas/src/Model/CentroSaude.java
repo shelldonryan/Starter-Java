@@ -5,17 +5,14 @@ import Interface.ICentroSaude;
 public class CentroSaude implements ICentroSaude{
     private String nome;
     private int capacidadeArmazenamento;
-    private boolean temEquipamentoAdequado;
-
-    public CentroSaude(String nome, int capacidadeArmazenamento, boolean temEquipamento) {
-        this.nome = nome;
-        this.capacidadeArmazenamento = capacidadeArmazenamento;
-        this.temEquipamentoAdequado = temEquipamento;
-    }
 
     @Override
     public String getNome() {
         return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override
@@ -23,9 +20,28 @@ public class CentroSaude implements ICentroSaude{
         return this.capacidadeArmazenamento;
     }
 
+    public void setCapacidadeArmazenamento(int capacidadeArmazenamento) {
+        this.capacidadeArmazenamento = capacidadeArmazenamento;
+    }
+
     @Override
     public boolean isTemEquipamentoAdequado() {
-        return this.temEquipamentoAdequado;
+        boolean status = false;
+
+        if (this.capacidadeArmazenamento >= 10){
+            status = true;
+        } else {
+            System.out.println("Não possui equipamento adequado");
+        }
+
+        return status;
     }
-    
+
+    @Override
+    public String toString() {
+        return "CentroSaude{" + 
+                "nome=" + nome +
+                ", capacidadeArmazenamento=" + capacidadeArmazenamento +
+                '}';
+    }
 }

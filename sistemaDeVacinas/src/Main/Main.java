@@ -1,62 +1,35 @@
 package Main;
 
 import java.time.LocalDate;
-import java.util.Scanner;
-
-import Exception.VacinaVencidaException;
 import Model.Aplicacao;
 import Model.CentroSaude;
 import Model.Paciente;
 import Model.Vacina;
+import Utils.SistemaGestao;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        SistemaGestao sistemaI = new SistemaGestao();
+        Paciente paciente = new Paciente();
+        paciente.setCpf("123321123213");
+        paciente.setNome("Rodrigo Filura");
 
-        System.out.print("Digite o nome do centro de saude: ");
-        String nomeCentroSaude = sc.nextLine();
-        System.out.print("Digite a capacidade do centro de saude: ");
-        int capacidadeArmazenamento = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Tem equipamento adequado esse centro de saude(y/n): ");
-        String resposta = sc.nextLine();
-        boolean temEquipamento = false;
-        if (resposta.toLowerCase().equals("y")) {
-            temEquipamento = true;
-        } else if(resposta.toLowerCase().equals("n")) {
-            temEquipamento = false;
-        }else {
-            System.out.println("Resposta Incorreta");
-        }
-       CentroSaude centroDeSaude1 = new CentroSaude(nomeCentroSaude, capacidadeArmazenamento, temEquipamento); 
+        Vacina vacina = new Vacina();
+        vacina.setLote("Gripe");
+        vacina.setTipo("Oral");
+        vacina.setValidade(LocalDate.of(2023, 11, 30));
 
-        System.out.print("\n\nDigite o nome do paciente: ");
-        String nomePaciente = sc.nextLine();
-        System.out.print("Digite o cpf do paciente: ");
-        int cpfPaciente = sc.nextInt();
-        sc.nextLine();
-        Paciente paciente1 = new Paciente(nomePaciente, cpfPaciente);
+        CentroSaude centroSaude = new CentroSaude();
+        centroSaude.setNome("Hospital Santa Terezinha");
+        centroSaude.setCapacidadeArmazenamento(10);
 
-        System.out.print("\n\nDigite o tipo da vacina: ");
-        String tipoVacina = sc.nextLine();
-        LocalDate validadeVacina = LocalDate.of(2023, 11, 30);
-        System.out.print("Digite o lote da vacina: ");
-        String loteVacina = sc.nextLine();
-        System.out.print("Essa vacina esta vencida: ");
-        boolean vacinaVencida = sc.nextBoolean();
-        Vacina vacinaGripe = new Vacina(tipoVacina, validadeVacina, loteVacina, vacinaVencida);
-        sc.nextLine();
+        Aplicacao aplicacao = new Aplicacao();
+        aplicacao.setPaciente(paciente);
+        aplicacao.setVacina(vacina);
+        aplicacao.setDataDeAplicacao(LocalDate.now());
 
-        Aplicacao aplicacao1 = new Aplicacao(paciente1, vacinaGripe, LocalDate.of(2023, 10, 30));
-        sc.close();
-
-        sistemaI.registrarCentroSaude(centroDeSaude1);
-
-        try {
-            sistemaI.registrarAlpicacao(paciente1, vacinaGripe, aplicacao1);
-        } catch (VacinaVencidaException e) {
-            System.out.println(e.getMessage());
-        }
+        SistemaGestao sistemaGestao = new SistemaGestao(1);
+        sistemaGestao.centrosSaude.add(centroSaude);
+        sistemaGestao.aplicacoes[0] = aplicacao;
+        sistemaGestao.registrarAplicacao(vacina);
     }
 }

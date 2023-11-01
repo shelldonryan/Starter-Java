@@ -1,25 +1,21 @@
 package Model;
 
 import java.time.LocalDate;
-
+import Exceptions.VacinaVencidaException;
 import Interface.IVacina;
 
 public class Vacina implements IVacina{
     private String tipo;
     private LocalDate validade;
     private String lote;
-    private boolean estaVencida;
-
-    public Vacina(String tipo, LocalDate validade, String lote, boolean estaVencida) {
-        this.tipo = tipo;
-        this.validade = validade;
-        this.lote = lote;
-        this.estaVencida = estaVencida; 
-    }
 
     @Override
     public String getTipo() {
         return this.tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     @Override
@@ -27,13 +23,42 @@ public class Vacina implements IVacina{
         return this.validade;
     }
 
+    public void setValidade(LocalDate validade) {
+        this.validade = validade;
+    }
+
     @Override
     public String getLote() {
         return this.lote;
     }
 
+    public void setLote(String lote) {
+        this.lote = lote;
+    }
+
     @Override
     public boolean isEstaVencida() {
-        return this.estaVencida;
+        boolean status = false;
+
+        try {
+            status = validade.isAfter(LocalDate.now());
+
+            if (!status) {
+                throw new VacinaVencidaException("Esta vacina esta vencida");
+            }
+        } catch (VacinaVencidaException e) {
+            System.err.println(e);
+        }
+
+        return status;
+    }
+
+    @Override
+    public String toString() {
+        return "Vacina{" + 
+                "tipo=" + tipo +
+                ", validade" + validade +
+                ", lote=" + lote + 
+                '}';
     }
 }
