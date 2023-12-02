@@ -1,5 +1,6 @@
 package com.shelldonryan.eventregistrationmanagement.domain;
 
+import com.shelldonryan.eventregistrationmanagement.dtos.EventRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.boot.autoconfigure.web.WebProperties;
@@ -21,5 +22,12 @@ public class Event {
     private String date;
     private String title;
     private String description;
+
+    public Event(EventRequestDTO eventRequest) {
+        this.date = eventRequest.date();
+        this.maxParticipants = eventRequest.maxParticipants();
+        this.title = eventRequest.title();
+        this.description = eventRequest.subscription();
+    }
 
 }
